@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "me.itinerati.firstApp"
+        version   = "1.0.0">
+		
+	<name>My First App</name>
+	
+	<description>This is my first attempt at an app using PhoneGap</description>
+	
+	<author href="http://itinerati.me" email="admin@itinerati.me">
+		Itinerati
+	</author>
+	
+	<preference name="permissions" value="none"/>
+	<preference name="splash-screen-duration" value="0" />
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	
+	
+</widget>
