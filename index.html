@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Note Taking App </title>
+<link type='text/css' href='style.css' rel='stylesheet'>
+<script src="jquery1-10-1.js">
+</script>
+<script type='text/javascript'>
+
+
+
+$(function(){
+	var leftWidth;
+	var rightWidth;
+	
+	var isDragging = false;
+	
+	$(window).resize(function() {
+			$('#left').css("right",leftWidth * $(window).width());
+			$('#right').css("right",rightWidth * $(window).width());
+		});
+
+
+		
+	$('#dragBar').mousedown(function(){
+		isDragging = true;
+	});	
+	
+		
+		
+		
+		
+	
+	
+	$(document).mousemove(function(e) {
+		if(isDragging == true){
+			if(e.pageX > 50 && e.pageX < $(window).width() -50){
+				$('#dragBar').css("left", e.pageX-5 + "px");
+				$('#left').css("right",($(window).width()-e.pageX) + "px");
+				$('#right').css("left",e.pageX + "px");
+			}
+		
+			$(window).mouseup(function(){
+				if(e.pageX < 250){
+					$('#dragBar').css("left", 50 + "px");
+					$('#left').css("right",($(window).width()-50) + "px");
+					$('#right').css("left",50 + "px");
+				}
+				else if(e.pageX > $(window).width() - 250){
+					$('#dragBar').css("left", ($(window).width()-50) + "px");
+					$('#left').css("right",50 + "px");
+					$('#right').css("left",($(window).width()-50) + "px");
+				}
+				else{
+					$('#dragBar').css("left", ($(window).width()/2)-5 + "px");
+					$('#left').css("right",($(window).width()/2) + "px");
+					$('#right').css("left",($(window).width()/2) + "px");
+				}
+				isDragging = false;
+					
+			});
+		}
+	});
+	
+	
+	
+	
+		
+});
+</script>
+
+</head>
+<body>
+
+<div id='header'>	</div>
+<div id='left'>		</div>
+<div id='right'>	</div>
+<div id='dragBar'> 	</div>
+
+
+</body>
+</html>

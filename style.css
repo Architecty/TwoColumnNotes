@@ -1,0 +1,41 @@
+#header{
+	position: absolute;
+	top: 0px;
+	height: 1.5em;
+	left: 0px;
+	right: 0px;
+	background-color: yellow;
+}
+
+#left{
+	position: absolute;
+	top:1.5em;
+	bottom: 0px;
+	left: 0px;
+	right: 50%;
+	background-color: red;
+
+}
+
+#right{
+	position: absolute;
+	top:1.5em;
+	bottom: 0px;
+	right: 0px;
+	left: 50%;
+	background-color: blue;
+
+
+}
+
+#dragBar{
+	position: absolute;
+	top:1.5em;
+	bottom: 0px;
+	left: 50%;
+	width: 10px;
+	background-color: green;
+	z-index: 2;
+
+
+}
